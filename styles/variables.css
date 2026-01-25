@@ -1,0 +1,25 @@
+:root {
+    /* Шрифты */
+    --main-font: Raleway;
+    --accent-font: 'STIX Two Text';
+    --section-title-font-size: 30px;
+    --text-font-size: 18px;
+    --section-title-line-height: .9;
+    --text-line-height: 1.16;
+    --section-title-font-weight: 600;
+    --text-font-weight: 400;
+
+    /* Базовые цвета */
+    --color-blue-dark: #312A4E;
+    --color-gray-medium: #B3B3B3;
+    --color-orange-warm: #FFAB6B;
+    --color-cream-light: #F3EFEC;
+    --color-gray-darkest: #171717;
+
+    /* Цвета для элементов */
+    --main-text-color: var(--color-blue-dark); /* Цвет текста светлая тема */
+    --secondary-text-color: var(--color-gray-medium); /* Цвет текста темная тема */
+    --accent-color: var(--color-orange-warm);
+    --bg-main-color: var(--color-cream-light); /* Цвет фона светлая тема */
+    --bg-secondary-color: var(--color-gray-darkest) /* Цвет фона темная тема */
+}

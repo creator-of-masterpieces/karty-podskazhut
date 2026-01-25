@@ -1,0 +1,242 @@
+/*Сброс стилей*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a:focus, button:focus {
+    outline: none;
+}
+
+/* Общие стили */
+.content-section {
+    padding-inline: 5vi;
+}
+
+.title {
+    font-family: var(--accent-font), ui-serif, serif;
+    font-weight: var(--section-title-font-weight, 600);
+    line-height: var(--section-title-line-height, .9);
+    text-align: center;
+}
+
+.link {
+    color: inherit;
+}
+
+/* Стили главной страницы */
+.page {
+    inline-size: clamp(22.5rem, 100%, 90rem);
+    margin: 0 auto;
+    font-family: var(--main-font), system-ui, sans-serif;
+    font-size: var(--text-font-size, 18px);
+    color: var(--main-text-color, #312A4E);
+    background: var(--bg-main-color, #F3EFEC);
+}
+
+/* Стили шапки */
+.header {
+    padding-block-start: 10%;
+}
+
+.header__title {
+    margin-block-end: 40px;
+    font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+}
+
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 20px;
+    border-block: 1px solid currentColor;
+}
+
+.header__theme-toggler {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    list-style: none;
+}
+
+.header__theme-button {
+    border: none;
+    font-family: inherit;
+    color: inherit;
+    font-size: 18px;
+    background: transparent;
+}
+
+.header__theme-button:hover {
+    cursor: pointer;
+}
+
+.header__theme-button:focus-visible, link:focus-visible {
+    outline: 1px solid currentColor;
+}
+
+.header__theme-button_is-active {
+    position: relative;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.header__theme-button_is-active::after {
+    content: "";
+    position: absolute;
+    left: -5px;
+    bottom: 2px;
+    z-index: -1;
+    width: calc(100% + 0.5em);
+    height: 0.40em;
+    background-color: var(--accent-color, #FFAB6B);
+}
+
+/* Стили основного контента */
+
+.content__title {
+    margin-block-start: 7%;
+    margin-block-end: 2.65%;
+    font-size: var(--section-title-font-size, 30px);
+}
+
+.content__text {
+    font-size: var(--text-font-size, 18px);
+    line-height: var(--text-line-height, 1);
+}
+
+.content__text:not(:last-child) {
+    margin-block-end: 27px;
+}
+
+.content__text_type_first-lettered .content__text:first-of-type::first-letter {
+    display: inline-block;
+    padding-right: 3px;
+    padding-left: 3px;
+    margin-inline-end: 4px;
+    font-weight: 700;
+    font-size: 30px;
+    background-color: var(--accent-color, #FFAB6B);
+}
+
+.content__image-container {
+    margin-block: 7%;
+    border-bottom: 1px solid currentColor;
+}
+
+.content__image-container {
+    position: relative;
+    right: 5vi;
+    inline-size: calc(100% + 10vi);
+}
+
+.content__image {
+    inline-size: 100%;
+}
+
+.content__image-caption {
+    padding-block: 20px;
+    font-size: var(--text-font-size, 18px);
+    text-align: center;
+}
+
+.content__blockquote {
+    max-inline-size: 75%;
+    margin-inline: auto;
+    margin-block-end: 27px;
+    font-size: var(--text-font-size, 18px);
+    line-height: 2em;
+    font-style: italic;
+}
+
+.content__card {
+    margin-block-start: 7%;
+    padding-block: clamp(3.625rem, -4.5rem + 36.1111vw, 28rem);
+    border: 1px solid currentColor;
+}
+
+.content__card-title {
+    font-size: 60px;
+}
+
+.content__card-description {
+    text-align: center;
+}
+
+.colored-text {
+    position: relative;
+}
+
+.colored-text:after {
+    content: "";
+    position: absolute;
+    left: -3px;
+    bottom: 11px;
+    z-index: -1;
+    width: 103.5%;
+    height: 0.25em;
+    background-color: var(--accent-color, #FFAB6B);
+}
+
+.content__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    list-style: none;
+    padding-inline-start: 40px;
+}
+
+.content__list-item {
+    position: relative;
+}
+
+.content__list-item::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: -23px;
+    inline-size: 11px;
+    aspect-ratio: 1/1;
+    background-color: var(--accent-color, #FFAB6B);
+    transform: rotate(45deg);
+}
+
+/* Стили подвала */
+.footer {
+    margin-block-start: 9.9%;
+    padding-block: 2.5%;
+    border-top: 1px solid currentColor;
+}
+
+.footer__text {
+    text-align: center;
+}
+
+/* Стили для темной темы */
+.page.theme_dark {
+    color: var(--secondary-text-color, #B3B3B3);
+    background-color: var(--bg-secondary-color, #171717);
+    --accent-color: transparent;
+}
+
+.theme_dark .header__theme-button_is-active::after {
+    left: -6px;
+    width: calc(100% + 0.7em);
+    background-image: url("../images/pattern.svg");
+}
+
+.theme_dark .content__text_type_first-lettered .content__text:first-of-type::first-letter {
+    border: 1px solid currentColor;
+}
+
+.theme_dark .colored-text:after {
+    background-image: url("../images/pattern.svg");
+}
+
+.theme_dark .content__list-item::before {
+    border: 1px solid currentColor;
+}
+
+
