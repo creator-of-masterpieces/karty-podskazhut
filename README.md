@@ -1,7 +1,7 @@
 ## Oblique Strategies — веб‑интерфейс для творческой генерации идей
 
-**Ссылка на развёрнутый проект (GitHub Pages):**  
-https://creator-of-masterpieces.github.io/karty-podskazhut/
+**Ссылка на развёрнутый проект:**  
+[https://creator-of-masterpieces.github.io/karty-podskazhut/](https://karty-podskazhut-psi.vercel.app/)
 
 ### Описание проекта
 
